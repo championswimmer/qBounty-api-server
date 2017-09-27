@@ -1,4 +1,5 @@
 const debug = require('debug')
+const config = require('../config')
 
 const jsonAPI = require('jsonapi-server')
 
@@ -6,8 +7,8 @@ jsonAPI.setConfig({
   graphiql: true,
   jsonapi: true,
   protocol: 'http',
-  hostname: 'localhost',
-  port: 4455,
+  hostname: config.SRV_CONFIG.SRV_HOSTNAME,
+  port: config.SRV_CONFIG.SRV_PORT,
   base: 'api',
   meta: {
     description: 'Coding Blocks Question Setter Bounty Board'

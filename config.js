@@ -4,6 +4,11 @@ let DB_PASS = 'puzzlepass'
 let DB_PORT = 5432
 let DB_HOST = 'localhost'
 let DB_DIALECT = 'postgres'
+const SRV_PORT = process.env.PORT || 4455
+const SRV_HOSTNAME =
+  process.env.HEROKU_APP_NAME
+    ? process.env.HEROKU_APP_NAME + '.herokuapp.com'
+    : 'localhost'
 
 if (process.env.DATABASE_URL) {
   let url = process.env.DATABASE_URL
@@ -20,4 +25,8 @@ if (process.env.DATABASE_URL) {
 
 exports.DB_CONFIG = {
   DB_HOST, DB_USER, DB_NAME, DB_PASS, DB_PORT, DB_DIALECT
+}
+
+exports.SRV_CONFIG = {
+  SRV_PORT, SRV_HOSTNAME
 }
