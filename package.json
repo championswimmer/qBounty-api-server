@@ -13,7 +13,7 @@
     "yarn": ">= 1"
   },
   "scripts": {
-    "start": "node src/server.js"
+    "start": "DEBUG=* node src/server.js"
   },
   "dependencies": {
     "debug": "^3.0.1",
