@@ -8,9 +8,9 @@
   "license": "MIT",
   "private": false,
   "engines": {
-    "node": ">= 8",
-    "npm": ">= 5",
-    "yarn": ">= 1"
+    "node": "8",
+    "npm": "5",
+    "yarn": "1"
   },
   "scripts": {
     "start": "DEBUG=* node src/server.js"

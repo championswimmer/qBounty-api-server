@@ -1,13 +1,11 @@
 const jsonAPI = require('jsonapi-server')
-const SQLHandler = require('../handlers/SQLHandler')
 const Joi = jsonAPI.Joi
-
-const handler = SQLHandler.createHandler()
+const handlers = require('./handlers')
 
 exports.resource = jsonAPI.define({
   namespace: 'json:api',
   resource: 'tasks',
-  handlers: handler,
+  handlers: handlers.sqlHandler,
   attributes: {
     title: Joi.string().max(200).required(),
     description: Joi.string().max(1000),
@@ -30,4 +28,4 @@ exports.resource = jsonAPI.define({
   ]
 })
 
-handler.populate({force: true})
+handlers.sqlHandler.populate({force: true})

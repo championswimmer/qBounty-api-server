@@ -37,7 +37,7 @@ jsonAPI.metrics.on('data', data => {
   debug('metrics')(data)
 })
 
-require('./resources')
+require('./models/index')
 
 exports.expressServer = jsonAPI.getExpressServer()
 exports.start = jsonAPI.start

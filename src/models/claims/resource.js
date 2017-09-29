@@ -1,13 +1,11 @@
 const jsonAPI = require('jsonapi-server')
-const SQLHandler = require('../handlers/SQLHandler')
 const Joi = jsonAPI.Joi
-
-const handler = SQLHandler.createHandler()
+const handlers = require('./handlers')
 
 exports.resource = jsonAPI.define({
   namespace: 'json:api',
   resource: 'claims',
-  handlers: handler,
+  handlers: handlers.sqlHandler,
   attributes: {
     description: Joi.string().max(1000),
     link: Joi.string().uri({scheme: ['http', 'https']}),
@@ -32,4 +30,4 @@ exports.resource = jsonAPI.define({
   ]
 })
 
-handler.populate({force: true})
+handlers.sqlHandler.populate({force: true})

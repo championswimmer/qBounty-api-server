@@ -1,6 +1,6 @@
 const SQLStore = require('jsonapi-store-sequelize')
 const debug = require('debug')('SQL')
-const config = require('../../config')
+const config = require('../../../config')
 
 exports.createHandler = function () {
   return new SQLStore({

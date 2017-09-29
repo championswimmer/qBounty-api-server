@@ -1,13 +1,11 @@
 const jsonAPI = require('jsonapi-server')
-const SQLHandler = require('../handlers/SQLHandler')
 const Joi = jsonAPI.Joi
-
-const handler = SQLHandler.createHandler()
+const handlers = require('./handlers')
 
 exports.resource = jsonAPI.define({
   namespace: 'json:api',
   resource: 'users',
-  handlers: handler,
+  handlers: handlers.sqlHandler,
   attributes: {
     username: Joi.string().alphanum(),
     tasks: Joi.belongsToMany({resource: 'tasks', as: 'taskOwner'}),
@@ -27,4 +25,3 @@ exports.resource = jsonAPI.define({
   ]
 })
 
-handler.populate({force: true})
