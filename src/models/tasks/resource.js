@@ -10,7 +10,7 @@ exports.resource = jsonAPI.define({
     title: Joi.string().max(200).required(),
     description: Joi.string().max(1000),
     instances: Joi.number().integer().min(1).default(1),
-    taskOwner: Joi.one('users'),
+    owner: Joi.one('users'),
     claims: Joi.belongsToMany({resource: 'claims', as: 'task'})
   },
   examples: [
@@ -20,7 +20,7 @@ exports.resource = jsonAPI.define({
       title: 'N-Queens Problem',
       description: 'Prepare a question on N-Queens',
       instances: 2,
-      taskOwner: {
+      owner: {
         id: '4988252d-370b-445b-9660-6e7c9478421b',
         type: 'users'
       }

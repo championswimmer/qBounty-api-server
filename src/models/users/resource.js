@@ -7,9 +7,7 @@ exports.resource = jsonAPI.define({
   resource: 'users',
   handlers: handlers.sqlHandler,
   attributes: {
-    username: Joi.string().alphanum(),
-    tasks: Joi.belongsToMany({resource: 'tasks', as: 'taskOwner'}),
-    claims: Joi.belongsToMany({resource: 'claims', as: 'claimant'})
+    username: Joi.string().alphanum()
   },
   examples: [
     {

@@ -19,7 +19,7 @@
     "debug": "^3.0.1",
     "express-graphiql-toolbox": "^0.1.0",
     "jsonapi-server": "^3.2.1",
-    "jsonapi-store-sequelize": "^3.0.0",
+    "jsonapi-store-sequelize": "^3",
     "pg": "^7.3.0",
     "pg-hstore": "^2.3.2",
     "swagger-ui-express": "^2.0.8"
