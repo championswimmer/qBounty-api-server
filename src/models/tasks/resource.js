@@ -24,8 +24,30 @@ exports.resource = jsonAPI.define({
         id: '4988252d-370b-445b-9660-6e7c9478421b',
         type: 'users'
       }
+    },
+    {
+      type: 'tasks',
+      id: '086dda0b-d1ab-4a82-9fea-f47cdbdc111c',
+      title: 'Catalan Number Problems',
+      description: 'Prepare a question like bracket matching',
+      instances: 1,
+      owner: {
+        id: '4988252d-370b-445b-9660-6e7c9478421b',
+        type: 'users'
+      }
+    },
+    {
+      type: 'tasks',
+      id: '0eac5cc9-8a9e-4705-9665-354f2b1b1010',
+      title: 'OOP Question - Constructor',
+      description: 'Prepare questions on constructors',
+      instances: 3,
+      owner: {
+        id: '27fb39e7-e80e-41ae-a944-2de6eed3a739',
+        type: 'users'
+      }
     }
   ]
 })
 
-handlers.sqlHandler.populate({alter: true})
+handlers.sqlHandler.populate({force: true})

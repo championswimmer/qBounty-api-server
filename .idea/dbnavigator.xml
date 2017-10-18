@@ -40,6 +40,7 @@
     <filter-list connection-id="47c1ded6-c015-4ebf-aa9d-16a3fca96416" dataset="public.claims" active-filter-id="EMPTY_FILTER" />
     <filter-list connection-id="47c1ded6-c015-4ebf-aa9d-16a3fca96416" dataset="public.tasks" active-filter-id="EMPTY_FILTER" />
     <filter-list connection-id="47c1ded6-c015-4ebf-aa9d-16a3fca96416" dataset="public.claims-claimant" active-filter-id="EMPTY_FILTER" />
+    <filter-list connection-id="47c1ded6-c015-4ebf-aa9d-16a3fca96416" dataset="public.tasks-owner" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

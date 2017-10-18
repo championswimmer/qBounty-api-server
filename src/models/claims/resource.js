@@ -26,8 +26,22 @@ exports.resource = jsonAPI.define({
         id: '2fdfe7a5-d407-420f-8276-4f1a1e496b49',
         type: 'users'
       }
+    },
+    {
+      type: 'claims',
+      id: '9ff16db9-7f32-45ff-9ac3-600980eb6e8c',
+      description: 'Proposing a catalan number question',
+      link: 'The best catalan number question I found on the internet.',
+      task: {
+        type: 'tasks',
+        id: '086dda0b-d1ab-4a82-9fea-f47cdbdc111c'
+      },
+      claimant: {
+        id: '9cd6dfcf-0cfa-4691-8832-efb61188440f',
+        type: 'users'
+      }
     }
   ]
 })
 
-handlers.sqlHandler.populate({alter: true})
+handlers.sqlHandler.populate({force: true})
