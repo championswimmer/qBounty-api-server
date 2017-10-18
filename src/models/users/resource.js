@@ -23,4 +23,4 @@ exports.resource = jsonAPI.define({
   ]
 })
 
-handlers.sqlHandler.populate({force: true})
+handlers.sqlHandler.populate({alter: true})

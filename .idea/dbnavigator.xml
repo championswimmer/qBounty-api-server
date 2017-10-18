@@ -25,7 +25,8 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="47c1ded6-c015-4ebf-aa9d-16a3fca96416">
-        <schema name="public" object-types="function, sequence, table, view" />
+        <schema name="pg_catalog" object-types="function" />
+        <schema name="public" object-types="column, constraint, function, index, sequence, table, dataset trigger, view" />
       </connection>
     </loaded-nodes>
   </component>
@@ -33,6 +34,12 @@
     <connection id="47c1ded6-c015-4ebf-aa9d-16a3fca96416">
       <console name="localhost - PostgreSQL" type="STANDARD" />
     </connection>
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-list connection-id="47c1ded6-c015-4ebf-aa9d-16a3fca96416" dataset="public.users" active-filter-id="EMPTY_FILTER" />
+    <filter-list connection-id="47c1ded6-c015-4ebf-aa9d-16a3fca96416" dataset="public.claims" active-filter-id="EMPTY_FILTER" />
+    <filter-list connection-id="47c1ded6-c015-4ebf-aa9d-16a3fca96416" dataset="public.tasks" active-filter-id="EMPTY_FILTER" />
+    <filter-list connection-id="47c1ded6-c015-4ebf-aa9d-16a3fca96416" dataset="public.claims-claimant" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

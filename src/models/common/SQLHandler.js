@@ -1,4 +1,4 @@
-const SQLStore = require('jsonapi-store-sequelize')
+const SQLStore = require('jsonapi-store-relationaldb')
 const debug = require('debug')('SQL')
 const config = require('../../../config')
 
