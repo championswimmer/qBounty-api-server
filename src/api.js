@@ -1,7 +1,7 @@
 const debug = require('debug')
 const config = require('../config')
 
-const jsonAPI = require('jsonapi-server')
+const jsonAPI = require('@coding-blocks/jsonapi-server')
 
 jsonAPI.setConfig({
   graphiql: true,
